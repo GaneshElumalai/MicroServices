@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class RegistrationService{
-	public static void main(String[] args) {
-		SpringApplication.run(RegistrationService.class, args);
+public class RegistrationServer{
+	public static void main(String[] args){
+		SpringApplication.run(RegistrationServer.class, args);
 	}
 }
