@@ -1,0 +1,31 @@
+.socializeHeader{
+	border: none;
+    background: #6dff6d;
+    text-align: center;
+    padding-top:3vh;
+    display:flex;
+}
+body{
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+.postButton{
+	background-color: #6dff6d;
+    border: none;
+    height: 40px;
+    width: 60px;
+}
+.postButton:hover{
+	background-color: #36f436f7;
+	cursor: pointer;
+}
+.bg-color-beige{
+	background: beige;
+}
+.h1_socialize_header{
+	width: 90%;
+    margin-top: 0px;
+}

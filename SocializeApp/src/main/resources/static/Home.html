@@ -1,23 +1,48 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>SocIalize</title>
+		<link rel="stylesheet" href="assets/css/Home.css" type="text/css"/>
+		<link rel="stylesheet" href="assets/css/Slider.css" type="text/css"/>
+		<script>
+			function switchTheme(element){
+				if(element.style.background==""){
+					console.log("current Color: "+element.style.color);
+					element.style.background="black"
+					element.style.color="white";
+				}
+				else{
+					element.style.background="white"
+					element.style.color="black";
+				}
+				console.log("Background :"+element.style.background+" , Color : "+element.style.color);
+			}
+		</script>
 	</head>
-	<body>
-		<div id="Socialize_Header">
-			<h1 style="
-			    margin: 5%;
-			    border: 2px solid blue;
-			    background: darkseagreen;
-			    text-align: center;">I Socialize !
-			</h1>
+	<body id="bodyElement">
+		<div id="Socialize_Header" class="socializeHeader">
+			<h1 class="h1_socialize_header">I Socialize !</h1>
+			<label class="switch">
+				<input type="checkbox" onclick="switchTheme(bodyElement)"/>
+				<span class="slider round"></span>
+			</label>	
 		</div>
 		<div>
-			<form action="/socialize/message" method="Get">
-				<p>Post your message : </p>
-				<textarea rows="5" cols="30" id="message"></textarea>
-				<button name="Post" id="submit_btn"></button>
+			<form id="message" action="/socialize/message">
+				<div class="col-sm-6">
+					<p>Post your message: </p>
+					<p style="display:inline-block">Privacy</p>
+					<select class="bg-color-beige" onclick="printValue(this)">
+						<option>Public</option>
+						<option>Private</option>
+						<option>Friends</option>
+					</select>
+				</div>
+				<textarea class="bg-color-beige" rows="5" cols="30" id="message"></textarea>
 			</form>
+			<button value="Post" class="postButton" formmethod="Post" form="message" id="submit_btn" type="submit">Post</button>
 		</div>
 	</body>
 </html>

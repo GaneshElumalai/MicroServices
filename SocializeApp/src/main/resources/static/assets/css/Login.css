@@ -1,0 +1,39 @@
+input {
+	border: none;
+	height: 45px;
+	background-color: #e6e6e6;
+	border: 1px solid transparent;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+.inputRow {
+	margin-bottom: 16px;
+	width:70vh;
+}
+
+#loginContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 10vh;
+}
+.submitLogin{
+	font-family: sans-serif;
+	font-weight: bold;
+	width: 73.5vh;
+	height: 7vh;
+	background-color: #36f436a3;
+	border:none;
+}
+.submitLogin:hover{
+	background-color: #36f436f7;
+	cursor: pointer;
+}
+.item-center{
+	display: flex;
+	justify-content: center;
+}
+.bg-color-beige{
+	background: beige;
+}
